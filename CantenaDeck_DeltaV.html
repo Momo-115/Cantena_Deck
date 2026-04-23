@@ -763,6 +763,422 @@
       text-transform: uppercase;
     }
 
+    /* ============== APPENDIX (shared reference/Q&A style) ============== */
+    .slide-appendix {
+      background: var(--bone);
+      color: var(--ink);
+      padding: 72px 96px 56px;
+    }
+
+    .slide-appendix .mark-tl,
+    .slide-appendix .mark-tr {
+      position: absolute;
+      top: 56px;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+      z-index: 2;
+    }
+    .slide-appendix .mark-tl { left: 96px; }
+    .slide-appendix .mark-tr { right: 96px; }
+
+    .appendix-content {
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      padding-top: 44px; /* clearance below corner marks */
+    }
+
+    .appendix-header {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .appendix-title {
+      display: flex;
+      align-items: baseline;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .appendix-title .tam-hero-num {
+      font-size: 80px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: var(--moisture);
+    }
+
+    .appendix-title .tam-hero-sub {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      line-height: 1.15;
+      color: var(--ink);
+    }
+
+    .appendix-summary {
+      font-size: 25px;
+      font-weight: 400;
+      color: var(--text-mute);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 18px;
+      line-height: 1.45;
+    }
+
+    .appendix-summary b {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .appendix-summary .arrow {
+      color: var(--text-mute);
+      opacity: 0.4;
+      font-weight: 300;
+      font-size: 22px;
+    }
+
+    .appendix-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.1fr;
+      gap: 72px;
+      flex: 1;
+      align-items: start;
+    }
+
+    .appendix-col {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      min-width: 0;
+    }
+
+    .col-header {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(10, 13, 18, 0.22);
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .data-table td {
+      padding: 14px 0;
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 1.35;
+      color: var(--ink);
+      border-bottom: 1px solid rgba(10, 13, 18, 0.07);
+      vertical-align: baseline;
+    }
+
+    .data-table td:first-child {
+      color: var(--ink);
+      padding-right: 14px;
+    }
+
+    .data-table td:last-child {
+      text-align: right;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .data-table th {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+      padding: 0 0 16px;
+      border-bottom: 1px solid rgba(10, 13, 18, 0.22);
+      text-align: right;
+    }
+
+    .data-table th:first-child {
+      text-align: left;
+    }
+
+    .data-table th:not(:first-child) {
+      padding-left: 16px;
+    }
+
+    .data-table td:not(:first-child):not(:last-child) {
+      text-align: right;
+      font-weight: 600;
+      padding-left: 16px;
+      white-space: nowrap;
+    }
+
+    .data-table tr.subtotal td {
+      font-weight: 700;
+      color: var(--ink);
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-top: 1px solid rgba(10, 13, 18, 0.25);
+      border-bottom: 1px solid rgba(10, 13, 18, 0.07);
+    }
+
+    .data-table tr.subtotal td:first-child {
+      color: var(--ink);
+    }
+
+    .data-table tr.highlight td {
+      color: var(--moisture);
+      font-weight: 700;
+      padding-top: 16px;
+      padding-bottom: 8px;
+      border-top: 1px solid rgba(43, 108, 176, 0.45);
+      border-bottom: none;
+    }
+
+    .data-table tr.highlight td:first-child {
+      color: var(--moisture);
+    }
+
+
+    .col-note {
+      font-size: 16px;
+      color: var(--text-mute);
+      font-style: italic;
+      line-height: 1.55;
+      margin-top: 10px;
+    }
+
+    .data-table .row-sub {
+      display: block;
+      font-size: 16px;
+      color: var(--text-mute);
+      font-weight: 400;
+      margin-top: 4px;
+      opacity: 0.78;
+      letter-spacing: 0;
+      font-style: normal;
+      line-height: 1.35;
+    }
+
+    /* Table variant where the section title lives inside the thead so its
+       column sub-labels share the same line as the section label. Used when a
+       column has multi-column data headers (e.g., Regional rollup). */
+    .data-table-w-title thead th.title-th {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+      text-align: left;
+      padding: 0 0 16px;
+      border-bottom: 1px solid rgba(10, 13, 18, 0.22);
+    }
+
+    .data-table-w-title thead th:not(.title-th) {
+      padding-bottom: 16px;
+    }
+
+    /* Compensate for the missing .appendix-col gap (18px) above the table,
+       since this table eats the col-header slot. */
+    .data-table-w-title tbody tr:first-child td {
+      padding-top: 32px;
+    }
+
+    .appendix-footer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.1fr;
+      gap: 72px;
+      padding-top: 26px;
+      border-top: 1px solid rgba(10, 13, 18, 0.16);
+    }
+
+    .appendix-footer .col-note {
+      margin-top: 0;
+    }
+
+    /* ============== APPENDIX A2 — BUSINESS MODEL ============== */
+
+    /* Layered stack: instead of A1's parallel column grid, A2 reads top-to-
+       bottom as stacked horizontal bands. Each band's left "label column"
+       carries a big %, the band name, and the one kept sub-caption (the
+       subtext-under-percentages the slide intentionally preserves). The right
+       content area holds the pricing detail for that layer. */
+    .model-stack {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: center;
+    }
+
+    .model-band {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      column-gap: 88px;
+      padding: 40px 0;
+      border-top: 1px solid rgba(10, 13, 18, 0.22);
+    }
+
+    .model-band:last-child {
+      border-bottom: 1px solid rgba(10, 13, 18, 0.22);
+    }
+
+    .band-label {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .band-label-percent {
+      font-size: 56px;
+      font-weight: 800;
+      color: var(--moisture);
+      letter-spacing: -0.025em;
+      line-height: 0.95;
+    }
+
+    .band-label-main {
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-top: 14px;
+    }
+
+    /* Role caption under each percentage — one of the three places subtext
+       is retained on the slide (the other two: thesis under title, desc
+       under each tier). Treated as readable ink content, not italic-muted. */
+    .band-label-sub {
+      font-size: 17px;
+      color: var(--ink);
+      line-height: 1.4;
+      margin-top: 12px;
+      max-width: 300px;
+      font-weight: 500;
+    }
+
+    /* One-liner thesis under the hero title — sized for readability, not
+       styled as a faded caption. */
+    .appendix-thesis {
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.4;
+      letter-spacing: -0.005em;
+      max-width: 1500px;
+    }
+
+    .appendix-thesis b {
+      font-weight: 700;
+    }
+
+    /* Software tiers — four stages reading L→R as customer progression.
+       Tiers now show only name + price (+ badge on highlight). Tier
+       descriptions moved to the footer key. */
+    .sw-tiers {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.15fr 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .tier {
+      display: flex;
+      flex-direction: column;
+      padding-top: 18px;
+      border-top: 1px solid rgba(10, 13, 18, 0.18);
+    }
+
+    .tier-highlight {
+      border-top: 2px solid var(--moisture);
+    }
+
+    .tier-name {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.015em;
+      line-height: 1;
+    }
+
+    .tier-highlight .tier-name {
+      color: var(--moisture);
+    }
+
+    .tier-price {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      line-height: 1;
+      margin-top: 16px;
+    }
+
+    /* Tier one-liner now sits BELOW the price (subtext under the number),
+       explaining what the firm unlocks for that $. Bumped in size + weight
+       to match the readability of the other sub-captions on the slide. */
+    .tier-desc {
+      font-size: 18px;
+      color: var(--ink);
+      font-weight: 500;
+      line-height: 1.4;
+      margin-top: 16px;
+    }
+
+    .tier-highlight .tier-price {
+      color: var(--moisture);
+      font-size: 32px;
+    }
+
+    .tier-badge {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--moisture);
+      margin-top: 14px;
+    }
+
+    /* Hardware pricing options — two options side-by-side inside the band.
+       Lease annualized is now inline in the price itself rather than a
+       subtext note, so the lease path reads "$189 / mo · $2,268 / yr". */
+    .hw-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .hw-option {
+      display: flex;
+      flex-direction: column;
+      padding-top: 18px;
+      border-top: 1px solid rgba(10, 13, 18, 0.18);
+    }
+
+    .hw-option-label {
+      font-size: 15px;
+      color: var(--text-mute);
+    }
+
+    .hw-option-price {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      line-height: 1;
+      margin-top: 14px;
+    }
+
     /* ============== APPENDIX DIVIDER (dark) ============== */
     .slide-appendix-divider {
       background: var(--ink);
@@ -2245,8 +2661,171 @@
       <div class="mark-br">Delta V &nbsp;&#x00B7;&nbsp; April 2026</div>
     </section>
 
+    <!-- ============== APPENDIX A1 — MARKET SIZE ============== -->
+    <section class="slide slide-appendix slide-appendix-tam" data-slide="9" id="slide-9">
+
+      <div class="mark-tl">A1 &nbsp;/&nbsp; Market Size</div>
+      <div class="mark-tr">Cantena</div>
+
+      <div class="appendix-content">
+
+        <header class="appendix-header">
+          <div class="appendix-title">
+            <span class="tam-hero-num">$1.3B</span>
+            <span class="tam-hero-sub">TAM: Bottom-up build</span>
+          </div>
+          <div class="appendix-summary">
+            <span><b>$83M</b> beachhead</span>
+            <span class="arrow">&rarr;</span>
+            <span><b>$811M</b> near-term TAM</span>
+            <span class="arrow">&rarr;</span>
+            <span><b>$1.1&ndash;1.3B</b> total TAM</span>
+          </div>
+        </header>
+
+        <div class="appendix-grid">
+
+          <!-- Col 1: How we get to 3,200 beachhead firms -->
+          <div class="appendix-col">
+            <div class="col-header">How we get to 3,200 firms</div>
+            <table class="data-table">
+              <tbody>
+                <tr><td>All US commercial construction firms</td><td>65,660</td></tr>
+                <tr><td>Mid-size regional firms</td><td>10,500</td></tr>
+                <tr><td>Primarily new ground-up construction</td><td>4,700</td></tr>
+                <tr class="highlight"><td>With a dedicated super or QCM on staff</td><td>3,200</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Col 2: How we get to $26,250 per firm per year -->
+          <div class="appendix-col">
+            <div class="col-header">How we get to $26K per firm / yr</div>
+            <table class="data-table">
+              <tbody>
+                <tr><td>Moisture probes</td><td>$2,080</td></tr>
+                <tr><td>Crew labor</td><td>$750</td></tr>
+                <tr><td>Outside lab verification</td><td>$750</td></tr>
+                <tr><td>Kits, surface meters, legacy tests</td><td>$170</td></tr>
+                <tr class="subtotal"><td>What one job costs</td><td>~$3,750</td></tr>
+                <tr class="highlight"><td>Typical firm runs 7 jobs a year</td><td>$26,250</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Col 3: How we get to $1.1–1.3B total TAM -->
+          <div class="appendix-col">
+            <table class="data-table data-table-w-title">
+              <thead>
+                <tr>
+                  <th scope="colgroup" class="title-th">How we get to $1.1&ndash;1.3B</th>
+                  <th scope="col">Starting wedge</th>
+                  <th scope="col">Full market</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>United States</td><td>$83M</td><td>$453M</td></tr>
+                <tr><td>Other F2170 markets</td><td>$65M</td><td>$358M</td></tr>
+                <tr class="subtotal"><td>Near-term TAM</td><td>$148M</td><td>$811M</td></tr>
+                <tr><td>EU + EFTA</td><td>$88M</td><td>$400M</td></tr>
+                <tr class="highlight"><td>Total TAM</td><td>$236M</td><td>$1.1&ndash;1.3B</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <footer class="appendix-footer">
+          <div class="col-note">Mid-size = $25M&ndash;$500M annual revenue. Ground-up = &gt;50% from new builds, not renovation. Below ~$30M, the owner typically covers the QCM role.</div>
+          <div class="col-note">Bottom-up from published prices. 52 probes per job (ASTM F2170). Outside-lab verification on ~1 in 4 jobs. Conservative probe-replacement parity. No value-capture uplift.</div>
+          <div class="col-note">Wedge = GC beachhead only. Full market = all 8 construction segments (5.5&times; multiplier). Other F2170 markets: Canada, UK, Ireland, Australia, NZ. EU bloc harmonizing via DIN&nbsp;EN&nbsp;17668:2022.</div>
+        </footer>
+
+      </div>
+
+    </section>
+
+    <!-- ============== APPENDIX A2 — BUSINESS MODEL ============== -->
+    <section class="slide slide-appendix slide-appendix-bm" data-slide="10" id="slide-10">
+
+      <div class="mark-tl">A2 &nbsp;/&nbsp; Business Model</div>
+      <div class="mark-tr">Cantena</div>
+
+      <div class="appendix-content">
+
+        <header class="appendix-header">
+          <div class="appendix-title">
+            <span class="tam-hero-num">$26K ACV</span>
+            <span class="tam-hero-sub">93% SaaS</span>
+          </div>
+          <div class="appendix-thesis">The device is the <b>activation layer</b>; the data is the <b>product</b>.</div>
+        </header>
+
+        <div class="model-stack">
+
+          <!-- TOP BAND: SOFTWARE — 93% of ACV -->
+          <div class="model-band">
+            <div class="band-label">
+              <div class="band-label-percent">93%</div>
+              <div class="band-label-main">Software</div>
+              <div class="band-label-sub">Progressive data &amp; analytics access</div>
+            </div>
+            <div class="band-content">
+              <div class="sw-tiers">
+                <div class="tier">
+                  <div class="tier-name">Free</div>
+                  <div class="tier-price">$0</div>
+                  <div class="tier-desc">Bundled with hardware. Raw readings, no analytics.</div>
+                </div>
+                <div class="tier">
+                  <div class="tier-name">Essentials</div>
+                  <div class="tier-price">$7,800 / yr</div>
+                  <div class="tier-desc">2D slab maps with depth profiling, unlimited projects.</div>
+                </div>
+                <div class="tier tier-highlight">
+                  <div class="tier-name">Professional</div>
+                  <div class="tier-price">$24,000 / yr</div>
+                  <div class="tier-desc">Predictive drying, F2170 readiness, firm-wide archive.</div>
+                  <div class="tier-badge">Beachhead target</div>
+                </div>
+                <div class="tier">
+                  <div class="tier-name">Enterprise</div>
+                  <div class="tier-price">$45K+ / yr</div>
+                  <div class="tier-desc">Cross-firm benchmarks, aggregated dataset API.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BOTTOM BAND: HARDWARE — 7% of ACV -->
+          <div class="model-band">
+            <div class="band-label">
+              <div class="band-label-percent">7%</div>
+              <div class="band-label-main">Hardware</div>
+              <div class="band-label-sub">Hardware layer priced to wedge the market</div>
+            </div>
+            <div class="band-content">
+              <div class="hw-options">
+                <div class="hw-option">
+                  <div class="hw-option-label">Lease (primary path)</div>
+                  <div class="hw-option-price">$189 / mo &middot; $2,268 / yr</div>
+                </div>
+                <div class="hw-option">
+                  <div class="hw-option-label">Buy + 3-yr service (alt)</div>
+                  <div class="hw-option-price">$5,147</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
     <!-- ============== APPENDIX B1 — FORWARD MODEL ============== -->
-    <section class="slide slide-b1" data-slide="9" id="slide-9">
+    <section class="slide slide-b1" data-slide="11" id="slide-11">
 
       <div class="mark-tl">B1 &nbsp;/&nbsp; Forward Model</div>
       <div class="mark-tr">Cantena</div>
@@ -2465,7 +3044,7 @@
     </section>
 
     <!-- ============== APPENDIX B2 — BAYESIAN INVERSION ============== -->
-    <section class="slide slide-b2" data-slide="10" id="slide-10">
+    <section class="slide slide-b2" data-slide="12" id="slide-12">
 
       <div class="mark-tl">B2 &nbsp;/&nbsp; Bayesian Inversion</div>
       <div class="mark-tr">Cantena</div>
@@ -2708,7 +3287,7 @@
     </section>
 
     <!-- ============== APPENDIX B6 — PIVOT TIMELINE ============== -->
-    <section class="slide slide-b6" data-slide="11" id="slide-11">
+    <section class="slide slide-b6" data-slide="13" id="slide-13">
 
       <div class="mark-tl">B6 &nbsp;/&nbsp; Pivot Timeline</div>
       <div class="mark-tr">Cantena</div>
@@ -2784,8 +3363,8 @@
       </div>
     </section>
 
-    <!-- ============== SLIDE 12 · APPENDIX B7 — PRODUCT ROADMAP ============== -->
-    <section class="slide slide-b7" data-slide="12" id="slide-12">
+    <!-- ============== SLIDE 14 · APPENDIX B7 — PRODUCT ROADMAP ============== -->
+    <section class="slide slide-b7" data-slide="14" id="slide-14">
 
       <div class="mark-tl">B7 &nbsp;/&nbsp; Product Roadmap</div>
       <div class="mark-tr">Cantena</div>
@@ -2835,8 +3414,8 @@
       </div>
     </section>
 
-    <!-- ============== SLIDE 13 · APPENDIX B8 — TRACTION DETAIL ============== -->
-    <section class="slide slide-b8" data-slide="13" id="slide-13">
+    <!-- ============== SLIDE 15 · APPENDIX B8 — TRACTION DETAIL ============== -->
+    <section class="slide slide-b8" data-slide="15" id="slide-15">
 
       <div class="mark-tl">B8 &nbsp;/&nbsp; Traction Detail</div>
       <div class="mark-tr">Cantena</div>
