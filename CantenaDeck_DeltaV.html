@@ -1235,6 +1235,60 @@
       margin-top: 4px;
     }
 
+    /* ============== APPENDIX A3 — COMPETITIVE ANALYSIS ============== */
+
+    /* Two-by-two strategic-play grid. Each cell = one strategic response by
+       competitor type (Coexist / Compete / Supplement / Channel). Visually
+       distinct from A1 (parallel cascades) and A2 (stacked bands). */
+    .play-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 112px;
+      row-gap: 56px;
+      flex: 1;
+      align-content: center;
+    }
+
+    .play {
+      display: flex;
+      flex-direction: column;
+      padding-top: 22px;
+      border-top: 1px solid rgba(10, 13, 18, 0.22);
+    }
+
+    .play-action {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--moisture);
+    }
+
+    .play-who {
+      font-size: 38px;
+      font-weight: 800;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      line-height: 1;
+      margin-top: 14px;
+    }
+
+    .play-cat {
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--text-mute);
+      margin-top: 10px;
+    }
+
+    .play-reason {
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.5;
+      margin-top: 20px;
+      max-width: 640px;
+    }
+
     /* ============== APPENDIX B1 — FORWARD MODEL ============== */
     .slide-b1 {
       background: var(--bone);
@@ -2824,8 +2878,60 @@
 
     </section>
 
+    <!-- ============== APPENDIX A3 — COMPETITIVE ANALYSIS ============== -->
+    <section class="slide slide-appendix slide-appendix-compete" data-slide="11" id="slide-11">
+
+      <div class="mark-tl">A3 &nbsp;/&nbsp; Competitive Analysis</div>
+      <div class="mark-tr">Cantena</div>
+
+      <div class="appendix-content">
+
+        <header class="appendix-header">
+          <div class="appendix-title">
+            <span class="tam-hero-num">4 plays</span>
+            <span class="tam-hero-sub">by competitor type</span>
+          </div>
+          <div class="appendix-thesis">Every competitor is a <b>point-reading instrument</b>; Cantena is the <b>intelligence platform</b>.</div>
+        </header>
+
+        <div class="play-grid">
+
+          <div class="play">
+            <div class="play-action">Coexist</div>
+            <div class="play-who">Wagner</div>
+            <div class="play-cat">Industry standard probes</div>
+            <div class="play-reason">They own today&rsquo;s certified test. Cantena adds intelligence on top.</div>
+          </div>
+
+          <div class="play">
+            <div class="play-action">Compete</div>
+            <div class="play-who">Tramex</div>
+            <div class="play-cat">Surface dielectric meters</div>
+            <div class="play-reason">Closest physics, same workflow. Cantena wins on depth, spatial, and software.</div>
+          </div>
+
+          <div class="play">
+            <div class="play-action">Supplement</div>
+            <div class="play-who">GANN</div>
+            <div class="play-cat">Chemical method (DACH)</div>
+            <div class="play-reason">German regulations block replacement. Cantena sits on top as a monitoring layer.</div>
+          </div>
+
+          <div class="play">
+            <div class="play-action">Channel</div>
+            <div class="play-who">3rd-party labs</div>
+            <div class="play-cat">IFTI, NDTI, regional firms</div>
+            <div class="play-reason">Reseller margins convert cannibalization into distribution.</div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
     <!-- ============== APPENDIX B1 — FORWARD MODEL ============== -->
-    <section class="slide slide-b1" data-slide="11" id="slide-11">
+    <section class="slide slide-b1" data-slide="12" id="slide-12">
 
       <div class="mark-tl">B1 &nbsp;/&nbsp; Forward Model</div>
       <div class="mark-tr">Cantena</div>
@@ -3044,7 +3150,7 @@
     </section>
 
     <!-- ============== APPENDIX B2 — BAYESIAN INVERSION ============== -->
-    <section class="slide slide-b2" data-slide="12" id="slide-12">
+    <section class="slide slide-b2" data-slide="13" id="slide-13">
 
       <div class="mark-tl">B2 &nbsp;/&nbsp; Bayesian Inversion</div>
       <div class="mark-tr">Cantena</div>
@@ -3287,7 +3393,7 @@
     </section>
 
     <!-- ============== APPENDIX B6 — PIVOT TIMELINE ============== -->
-    <section class="slide slide-b6" data-slide="13" id="slide-13">
+    <section class="slide slide-b6" data-slide="14" id="slide-14">
 
       <div class="mark-tl">B6 &nbsp;/&nbsp; Pivot Timeline</div>
       <div class="mark-tr">Cantena</div>
@@ -3363,8 +3469,8 @@
       </div>
     </section>
 
-    <!-- ============== SLIDE 14 · APPENDIX B7 — PRODUCT ROADMAP ============== -->
-    <section class="slide slide-b7" data-slide="14" id="slide-14">
+    <!-- ============== SLIDE 15 · APPENDIX B7 — PRODUCT ROADMAP ============== -->
+    <section class="slide slide-b7" data-slide="15" id="slide-15">
 
       <div class="mark-tl">B7 &nbsp;/&nbsp; Product Roadmap</div>
       <div class="mark-tr">Cantena</div>
@@ -3414,8 +3520,8 @@
       </div>
     </section>
 
-    <!-- ============== SLIDE 15 · APPENDIX B8 — TRACTION DETAIL ============== -->
-    <section class="slide slide-b8" data-slide="15" id="slide-15">
+    <!-- ============== SLIDE 16 · APPENDIX B8 — TRACTION DETAIL ============== -->
+    <section class="slide slide-b8" data-slide="16" id="slide-16">
 
       <div class="mark-tl">B8 &nbsp;/&nbsp; Traction Detail</div>
       <div class="mark-tr">Cantena</div>
