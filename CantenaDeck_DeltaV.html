@@ -1081,13 +1081,13 @@
       font-weight: 700;
     }
 
-    /* Software tiers — four stages reading L→R as customer progression.
-       Tiers now show only name + price (+ badge on highlight). Tier
-       descriptions moved to the footer key. */
+    /* Software tiers — three revenue lines reading L→R: recurring floor,
+       metered usage (highlight — the beachhead anchor), then expansion
+       modules that compound NRR in later years. */
     .sw-tiers {
       display: grid;
-      grid-template-columns: 1fr 1fr 1.15fr 1fr;
-      gap: 32px;
+      grid-template-columns: 1fr 1.25fr 1fr;
+      gap: 48px;
       align-items: start;
     }
 
@@ -2809,64 +2809,58 @@
 
         <header class="appendix-header">
           <div class="appendix-title">
-            <span class="tam-hero-num">$26K ACV</span>
-            <span class="tam-hero-sub">93% SaaS</span>
+            <span class="tam-hero-num">$20K &rarr; $40K</span>
+            <span class="tam-hero-sub">per firm &middot; 91% SaaS &middot; ~150% NRR</span>
           </div>
-          <div class="appendix-thesis">The device is the <b>activation layer</b>; the data is the <b>product</b>.</div>
+          <div class="appendix-thesis">Platform <b>recurs</b>. Usage <b>scales</b> with projects. Modules <b>expand</b> the firm over time.</div>
         </header>
 
         <div class="model-stack">
 
-          <!-- TOP BAND: SOFTWARE — 93% of ACV -->
+          <!-- TOP BAND: SOFTWARE — 91% of ACV -->
           <div class="model-band">
             <div class="band-label">
-              <div class="band-label-percent">93%</div>
+              <div class="band-label-percent">91%</div>
               <div class="band-label-main">Software</div>
-              <div class="band-label-sub">Progressive data &amp; analytics access</div>
+              <div class="band-label-sub">Three recurring lines that compound</div>
             </div>
             <div class="band-content">
               <div class="sw-tiers">
                 <div class="tier">
-                  <div class="tier-name">Free</div>
-                  <div class="tier-price">$0</div>
-                  <div class="tier-desc">Bundled with hardware. Raw readings, no analytics.</div>
-                </div>
-                <div class="tier">
-                  <div class="tier-name">Essentials</div>
-                  <div class="tier-price">$7,800 / yr</div>
-                  <div class="tier-desc">2D slab maps with depth profiling, unlimited projects.</div>
+                  <div class="tier-name">Platform floor</div>
+                  <div class="tier-price">$8K / yr</div>
+                  <div class="tier-desc">Per firm. Unlimited users, scans, archive, integrations.</div>
                 </div>
                 <div class="tier tier-highlight">
-                  <div class="tier-name">Professional</div>
-                  <div class="tier-price">$24,000 / yr</div>
-                  <div class="tier-desc">Predictive drying, test readiness, firm-wide archive.</div>
-                  <div class="tier-badge">Beachhead target</div>
+                  <div class="tier-name">Per-project usage</div>
+                  <div class="tier-price">$500&ndash;1,500 / project</div>
+                  <div class="tier-desc">Drying prediction, anomaly detection, test readiness.</div>
                 </div>
                 <div class="tier">
-                  <div class="tier-name">Enterprise</div>
-                  <div class="tier-price">$45K+ / yr</div>
-                  <div class="tier-desc">Cross-firm benchmarks, aggregated dataset API.</div>
+                  <div class="tier-name">Expansion modules</div>
+                  <div class="tier-price">$5&ndash;15K / yr ea.</div>
+                  <div class="tier-desc">Insurance data, supplier intel, portfolio view. Ships Y2+.</div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- BOTTOM BAND: HARDWARE — 7% of ACV -->
+          <!-- BOTTOM BAND: HARDWARE — 9% of ACV -->
           <div class="model-band">
             <div class="band-label">
-              <div class="band-label-percent">7%</div>
+              <div class="band-label-percent">9%</div>
               <div class="band-label-main">Hardware</div>
-              <div class="band-label-sub">Hardware layer priced to wedge the market</div>
+              <div class="band-label-sub">Near-cost activation, not a revenue line</div>
             </div>
             <div class="band-content">
               <div class="hw-options">
                 <div class="hw-option">
-                  <div class="hw-option-label">Lease (primary path)</div>
-                  <div class="hw-option-price">$189 / mo &middot; $2,268 / yr</div>
+                  <div class="hw-option-label">Lease (single path)</div>
+                  <div class="hw-option-price">$150&ndash;200 / mo &middot; ~$2,000 / yr</div>
                 </div>
                 <div class="hw-option">
-                  <div class="hw-option-label">Buy + 3-yr service (alt)</div>
-                  <div class="hw-option-price">$5,147</div>
+                  <div class="hw-option-label">Role</div>
+                  <div class="hw-option-price" style="font-size:20px; font-weight:500; letter-spacing:-0.005em; line-height:1.4;">Every device is a recurring software relationship and a node in the data moat.</div>
                 </div>
               </div>
             </div>
