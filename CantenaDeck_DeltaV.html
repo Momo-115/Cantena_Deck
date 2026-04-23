@@ -763,6 +763,692 @@
       text-transform: uppercase;
     }
 
+    /* ============== APPENDIX DIVIDER (dark) ============== */
+    .slide-appendix-divider {
+      background: var(--ink);
+      color: var(--paper);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .slide-appendix-divider .mark-tl,
+    .slide-appendix-divider .mark-br {
+      position: absolute;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.38);
+      z-index: 2;
+    }
+    .slide-appendix-divider .mark-tl { top: 56px; left: 128px; }
+    .slide-appendix-divider .mark-br { bottom: 56px; right: 128px; font-weight: 400; letter-spacing: 0.24em; }
+
+    .appendix-stack {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+      text-align: center;
+    }
+    .appendix-eyebrow {
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      color: var(--signal);
+      opacity: 0.72;
+      padding-left: 0.5em;
+    }
+    .appendix-title {
+      font-size: 176px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: var(--paper);
+      padding-left: 0.03em; /* optical centering with the tracked eyebrow */
+    }
+    .appendix-sub {
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.55);
+      margin-top: 4px;
+    }
+
+    /* ============== APPENDIX B1 — FORWARD MODEL ============== */
+    .slide-b1 {
+      background: var(--bone);
+      color: var(--ink);
+      padding: 72px 128px;
+    }
+    .slide-b1 .mark-tl,
+    .slide-b1 .mark-tr {
+      position: absolute;
+      top: 56px;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+      z-index: 2;
+    }
+    .slide-b1 .mark-tl { left: 128px; }
+    .slide-b1 .mark-tr { right: 128px; }
+
+    .b1-content {
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 36px;
+      padding-top: 48px;
+      padding-bottom: 12px;
+    }
+
+    .b1-header {
+      text-align: center;
+    }
+    .b1-header .title {
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .b1-header .sub {
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--text-mute);
+      margin-top: 10px;
+      letter-spacing: 0.005em;
+    }
+
+    .b1-grid {
+      display: grid;
+      grid-template-columns: 340px 1fr 640px;
+      gap: 72px;
+      align-items: center;
+      max-width: 1664px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .b1-pane-label {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    /* Left pane — slab visual */
+    .b1-left .slab-wrap {
+      display: flex;
+      justify-content: center;
+    }
+    .b1-left .slab-wrap svg {
+      display: block;
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+    }
+
+    /* Middle pane — physics pipeline */
+    .b1-pipeline {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .b1-stage {
+      padding: 16px 24px;
+      border: 1px solid rgba(10, 13, 18, 0.22);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.6);
+    }
+    .b1-stage .name {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+    .b1-stage .detail {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--text-mute);
+      margin-top: 4px;
+      letter-spacing: 0.003em;
+    }
+    .b1-pipeline-arrow {
+      display: flex;
+      justify-content: center;
+      color: rgba(10, 13, 18, 0.4);
+      font-size: 20px;
+      line-height: 1;
+      margin: -2px 0;
+    }
+
+    /* Right pane — output chart */
+    .b1-right {
+      display: flex;
+      flex-direction: column;
+    }
+    .b1-output-panel {
+      border: 1px solid rgba(10, 13, 18, 0.22);
+      border-radius: 12px;
+      background: #FFFFFF;
+      padding: 22px 28px 18px;
+    }
+    .b1-output-panel .panel-header {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+    .b1-output-panel .panel-subhead {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--text-mute);
+      margin-top: 2px;
+    }
+    .b1-chart-svg {
+      width: 100%;
+      height: auto;
+      margin-top: 12px;
+      display: block;
+    }
+    .b1-right .output-caption {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--text-mute);
+      margin-top: 16px;
+      font-style: italic;
+      letter-spacing: 0.005em;
+      text-align: center;
+    }
+
+    /* Footer strip */
+    .b1-footer {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--text-mute);
+      letter-spacing: 0.005em;
+      padding-top: 20px;
+      border-top: 1px solid rgba(10, 13, 18, 0.14);
+      max-width: 1480px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+    .b1-footer b {
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    /* ============== APPENDIX B2 — BAYESIAN INVERSION ============== */
+    .slide-b2 {
+      background: var(--bone);
+      color: var(--ink);
+      padding: 72px 128px;
+    }
+    .slide-b2 .mark-tl,
+    .slide-b2 .mark-tr {
+      position: absolute;
+      top: 56px;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+      z-index: 2;
+    }
+    .slide-b2 .mark-tl { left: 128px; }
+    .slide-b2 .mark-tr { right: 128px; }
+
+    .b2-content {
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 36px;
+      padding-top: 48px;
+      padding-bottom: 12px;
+    }
+
+    .b2-header {
+      text-align: center;
+    }
+    .b2-header .title {
+      font-size: 42px;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .b2-header .sub {
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--text-mute);
+      margin-top: 10px;
+      letter-spacing: 0.005em;
+    }
+
+    .b2-grid {
+      display: grid;
+      grid-template-columns: 440px 1fr 600px;
+      gap: 64px;
+      align-items: start;
+      max-width: 1664px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .b2-pane-label {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    /* Left / Right — chart panels */
+    .b2-chart-panel {
+      border: 1px solid rgba(10, 13, 18, 0.22);
+      border-radius: 12px;
+      background: #FFFFFF;
+      padding: 18px 22px 14px;
+    }
+    .b2-chart-panel .panel-header {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+    .b2-chart-panel .panel-subhead {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--text-mute);
+      margin-top: 2px;
+    }
+    .b2-chart-svg {
+      width: 100%;
+      height: auto;
+      margin-top: 10px;
+      display: block;
+    }
+    .b2-caption {
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--text-mute);
+      margin-top: 14px;
+      font-style: italic;
+      letter-spacing: 0.005em;
+      text-align: center;
+    }
+
+    /* Middle — inversion pipeline */
+    .b2-pipeline {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .b2-stage {
+      padding: 14px 22px;
+      border: 1px solid rgba(10, 13, 18, 0.22);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.6);
+    }
+    .b2-stage .name {
+      font-size: 23px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+    .b2-stage .detail {
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--text-mute);
+      margin-top: 4px;
+      letter-spacing: 0.003em;
+    }
+    .b2-pipeline-arrow {
+      display: flex;
+      justify-content: center;
+      color: rgba(10, 13, 18, 0.4);
+      font-size: 20px;
+      line-height: 1;
+      margin: -2px 0;
+    }
+    .b2-loop-note {
+      margin-top: 12px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+    }
+    .b2-loop-note .loop-arrow {
+      color: rgba(10, 13, 18, 0.5);
+      font-size: 16px;
+      vertical-align: -1px;
+      margin-right: 4px;
+    }
+
+    /* Footer strip */
+    .b2-footer {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--text-mute);
+      letter-spacing: 0.005em;
+      padding-top: 20px;
+      border-top: 1px solid rgba(10, 13, 18, 0.14);
+      max-width: 1480px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+    .b2-footer b {
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    /* ============== APPENDIX B6 — PIVOT TIMELINE ============== */
+    .slide-b6 {
+      background: var(--bone);
+      color: var(--ink);
+      padding: 72px 128px;
+    }
+    .slide-b6 .mark-tl,
+    .slide-b6 .mark-tr {
+      position: absolute;
+      top: 56px;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+      z-index: 2;
+    }
+    .slide-b6 .mark-tl { left: 128px; }
+    .slide-b6 .mark-tr { right: 128px; }
+
+    .b6-content {
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 56px;
+      padding-top: 48px;
+      padding-bottom: 12px;
+    }
+
+    .b6-timeline-wrap {
+      width: 100%;
+      max-width: 1664px;
+      margin: 0 auto;
+    }
+    .b6-timeline-wrap svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ============== APPENDIX B7 — PRODUCT ROADMAP ============== */
+    .slide-b7 {
+      background: var(--bone);
+      color: var(--ink);
+      padding: 72px 128px;
+    }
+    .slide-b7 .mark-tl,
+    .slide-b7 .mark-tr {
+      position: absolute;
+      top: 56px;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+      z-index: 2;
+    }
+    .slide-b7 .mark-tl { left: 128px; }
+    .slide-b7 .mark-tr { right: 128px; }
+
+    .b7-content {
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 64px;
+      padding-top: 48px;
+      padding-bottom: 12px;
+    }
+
+    .b7-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      width: 100%;
+      max-width: 1664px;
+      margin: 0 auto;
+    }
+
+    .b7-card {
+      background: transparent;
+      border: 2px solid var(--ink);
+      border-radius: 16px;
+      padding: 36px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      min-height: 260px;
+    }
+    .b7-card .stage {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+    }
+    .b7-card .stage .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--ink);
+      flex-shrink: 0;
+    }
+    .b7-card .headline {
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+      line-height: 1.22;
+    }
+    .b7-card .desc {
+      font-size: 19px;
+      color: var(--text-mute);
+      line-height: 1.5;
+      font-weight: 400;
+    }
+
+    /* Concreteness decay: NOW → FUTURE */
+    .b7-card.is-now {
+      border-color: var(--moisture);
+      border-width: 2.5px;
+    }
+    .b7-card.is-now .stage .dot { background: var(--moisture); }
+    .b7-card.is-now .stage .label { color: var(--moisture); }
+
+    .b7-card.is-summer {
+      border-color: var(--ink);
+    }
+
+    .b7-card.is-next {
+      border-style: dashed;
+      border-color: var(--text-mute);
+    }
+    .b7-card.is-next .stage .dot {
+      background: transparent;
+      border: 2px solid var(--text-mute);
+      width: 10px;
+      height: 10px;
+    }
+
+    .b7-card.is-future {
+      border-style: dashed;
+      border-color: rgba(90, 100, 114, 0.55);
+    }
+    .b7-card.is-future .stage .dot {
+      background: transparent;
+      border: 2px solid rgba(90, 100, 114, 0.6);
+      width: 10px;
+      height: 10px;
+    }
+    .b7-card.is-future .headline { color: #3a424c; }
+
+    /* ============== APPENDIX B8 — TRACTION DETAIL ============== */
+    .slide-b8 {
+      background: var(--bone);
+      color: var(--ink);
+      padding: 72px 128px;
+    }
+    .slide-b8 .mark-tl,
+    .slide-b8 .mark-tr {
+      position: absolute;
+      top: 56px;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+      z-index: 2;
+    }
+    .slide-b8 .mark-tl { left: 128px; }
+    .slide-b8 .mark-tr { right: 128px; }
+
+    .b8-content {
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 48px;
+      padding-bottom: 12px;
+    }
+
+    .b8-cols {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 56px;
+      width: 100%;
+      max-width: 1664px;
+      margin: 0 auto;
+    }
+
+    .b8-col {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .b8-col .col-header {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--moisture);
+      padding-bottom: 14px;
+      border-bottom: 1.5px solid rgba(10, 13, 18, 0.22);
+    }
+
+    .b8-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .b8-group .group-label {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+      margin-bottom: 4px;
+    }
+
+    .b8-group .group-sub {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--text-mute);
+      line-height: 1.4;
+      margin-top: -2px;
+      margin-bottom: 2px;
+    }
+
+    .b8-group .subgroup-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+      opacity: 0.82;
+      margin-top: 6px;
+      margin-bottom: 2px;
+    }
+
+    .b8-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .b8-item .org {
+      font-size: 21px;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.28;
+      letter-spacing: -0.005em;
+    }
+
+    .b8-item .meta {
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--text-mute);
+      line-height: 1.4;
+    }
+
+    .b8-item-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 18px;
+      row-gap: 6px;
+    }
+
+    .b8-item-list .org-line {
+      font-size: 19px;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.35;
+    }
+
     /* Export controls */
     .controls {
       position: fixed;
@@ -1426,7 +2112,7 @@
                  src="data:image/jpeg;base64,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"
                  alt="Mohamed Mohamed" />
             <div class="member-name">Mohamed Mohamed</div>
-            <div class="member-school">CGO &nbsp;&#x00B7;&nbsp; UMass Bio &amp; Chem &#x2019;27</div>
+            <div class="member-school">COO &nbsp;&#x00B7;&nbsp; UMass Bio &amp; Chem &#x2019;27</div>
             <div class="member-specialty">Wet lab sensor calibration</div>
           </div>
 
@@ -1461,7 +2147,7 @@
               <div class="traction-item">
                 <span class="marker">&#x2022;</span>
                 <div class="traction-item-body">
-                  <div class="main">Harris Flooring: 5 projects, sharing data</div>
+                  <div class="main">Harris Flooring: 5 projects, launch partner</div>
                   <div class="sub">Same director who quoted the $2.9M figure.</div>
                 </div>
               </div>
@@ -1545,6 +2231,715 @@
         <div class="ask-url">cantena.co</div>
       </div>
 
+    </section>
+
+    <!-- ============== APPENDIX DIVIDER ============== -->
+    <section class="slide slide-appendix-divider" data-slide="8" id="slide-8">
+
+      <div class="mark-tl">Cantena</div>
+
+      <div class="appendix-stack">
+        <div class="appendix-title">APPENDIX</div>
+      </div>
+
+      <div class="mark-br">Delta V &nbsp;&#x00B7;&nbsp; April 2026</div>
+    </section>
+
+    <!-- ============== APPENDIX B1 — FORWARD MODEL ============== -->
+    <section class="slide slide-b1" data-slide="9" id="slide-9">
+
+      <div class="mark-tl">B1 &nbsp;/&nbsp; Forward Model</div>
+      <div class="mark-tr">Cantena</div>
+
+      <div class="b1-content">
+
+        <div class="b1-header">
+          <div class="title">How we predict reflectance from moisture</div>
+          <div class="sub">Broadband RF reflection spectrum, layer by layer.</div>
+        </div>
+
+        <div class="b1-grid">
+
+          <!-- ============ LEFT PANE — PROFILE ============ -->
+          <div class="b1-left">
+            <div class="b1-pane-label">Profile</div>
+            <div class="slab-wrap">
+              <svg viewBox="0 0 320 400" xmlns="http://www.w3.org/2000/svg"
+                   preserveAspectRatio="xMidYMid meet"
+                   font-family="Inter, -apple-system, sans-serif">
+
+                <defs>
+                  <linearGradient id="b1SlabGradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%"  stop-color="#F0EDE5" />
+                    <stop offset="30%" stop-color="#D1DCEA" />
+                    <stop offset="60%" stop-color="#7FA3C8" />
+                    <stop offset="90%" stop-color="#3E72A7" />
+                    <stop offset="100%" stop-color="#2B6CB0" />
+                  </linearGradient>
+                </defs>
+
+                <!-- Depth labels (left) -->
+                <g fill="#5A6472" font-size="14" text-anchor="end" font-weight="500">
+                  <text x="52" y="32">0&quot;</text>
+                  <text x="52" y="208">~3&quot;</text>
+                  <text x="52" y="376">~6&quot;</text>
+                </g>
+                <g stroke="#5A6472" stroke-width="1">
+                  <line x1="58" y1="28" x2="66" y2="28" />
+                  <line x1="58" y1="204" x2="66" y2="204" />
+                  <line x1="58" y1="372" x2="66" y2="372" />
+                </g>
+
+                <!-- Slab rectangle with moisture gradient -->
+                <rect x="72" y="24" width="170" height="352"
+                      fill="url(#b1SlabGradient)"
+                      stroke="#1A1D22" stroke-width="1.5" />
+
+                <!-- Subtle N-layer division lines -->
+                <g stroke="#1A1D22" stroke-width="0.5" opacity="0.25">
+                  <line x1="72" y1="59.2"  x2="242" y2="59.2" />
+                  <line x1="72" y1="94.4"  x2="242" y2="94.4" />
+                  <line x1="72" y1="129.6" x2="242" y2="129.6" />
+                  <line x1="72" y1="164.8" x2="242" y2="164.8" />
+                  <line x1="72" y1="200"   x2="242" y2="200" />
+                  <line x1="72" y1="235.2" x2="242" y2="235.2" />
+                  <line x1="72" y1="270.4" x2="242" y2="270.4" />
+                  <line x1="72" y1="305.6" x2="242" y2="305.6" />
+                  <line x1="72" y1="340.8" x2="242" y2="340.8" />
+                </g>
+
+                <!-- Dry / Wet labels inside slab -->
+                <text x="157" y="50" text-anchor="middle"
+                      fill="#1A1D22" fill-opacity="0.58"
+                      font-size="12" letter-spacing="3" font-weight="700">DRY</text>
+                <text x="157" y="364" text-anchor="middle"
+                      fill="#FFFFFF" fill-opacity="0.92"
+                      font-size="12" letter-spacing="3" font-weight="700">WET</text>
+
+                <!-- Right-side bracket + "N layers" annotation -->
+                <g stroke="#1A1D22" stroke-width="1.25" fill="none">
+                  <path d="M 248 28 L 254 28 L 254 372 L 248 372" />
+                  <line x1="254" y1="200" x2="260" y2="200" />
+                </g>
+                <text x="266" y="196" fill="#1A1D22" font-size="14" font-weight="600">N layers</text>
+                <text x="266" y="214" fill="#5A6472" font-size="12" font-weight="400">uniform &#x0394;z</text>
+
+              </svg>
+            </div>
+          </div>
+
+          <!-- ============ MIDDLE PANE — PHYSICS PIPELINE ============ -->
+          <div class="b1-mid">
+            <div class="b1-pane-label">Physics Pipeline</div>
+            <div class="b1-pipeline">
+
+              <div class="b1-stage">
+                <div class="name">Water permittivity</div>
+                <div class="detail">Debye relaxation &#x002B; conductive loss, 1&ndash;10 GHz</div>
+              </div>
+
+              <div class="b1-pipeline-arrow">&#x2193;</div>
+
+              <div class="b1-stage">
+                <div class="name">Composite permittivity</div>
+                <div class="detail">CRIM mixing: water &#x002B; air &#x002B; solid, per layer</div>
+              </div>
+
+              <div class="b1-pipeline-arrow">&#x2193;</div>
+
+              <div class="b1-stage">
+                <div class="name">Wave propagation</div>
+                <div class="detail">Transfer-matrix cascade across N layers</div>
+              </div>
+
+              <div class="b1-pipeline-arrow">&#x2193;</div>
+
+              <div class="b1-stage">
+                <div class="name">Surface reflection</div>
+                <div class="detail">&#x0393;(f) from cumulative input impedance</div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- ============ RIGHT PANE — OUTPUT SPECTRUM ============ -->
+          <div class="b1-right">
+            <div class="b1-pane-label">Reflection Spectrum</div>
+            <div class="b1-output-panel">
+              <div class="panel-header">&#x007C;&#x0393;(f)&#x007C;</div>
+              <div class="panel-subhead">Magnitude vs frequency. What the VNA measures.</div>
+
+              <svg class="b1-chart-svg"
+                   viewBox="0 0 580 300" xmlns="http://www.w3.org/2000/svg"
+                   preserveAspectRatio="xMidYMid meet"
+                   font-family="Inter, -apple-system, sans-serif">
+
+                <!-- Y-axis -->
+                <line x1="64" y1="32" x2="64" y2="244"
+                      stroke="#1A1D22" stroke-width="1.25" />
+
+                <!-- X-axis -->
+                <line x1="64" y1="244" x2="548" y2="244"
+                      stroke="#1A1D22" stroke-width="1.25" />
+
+                <!-- Y-axis ticks + labels -->
+                <g stroke="#5A6472" stroke-width="1">
+                  <line x1="58" y1="32"  x2="64" y2="32" />
+                  <line x1="58" y1="85"  x2="64" y2="85" />
+                  <line x1="58" y1="138" x2="64" y2="138" />
+                  <line x1="58" y1="191" x2="64" y2="191" />
+                  <line x1="58" y1="244" x2="64" y2="244" />
+                </g>
+                <g fill="#5A6472" font-size="12" text-anchor="end" font-weight="500">
+                  <text x="52" y="36">1.0</text>
+                  <text x="52" y="89">0.75</text>
+                  <text x="52" y="142">0.50</text>
+                  <text x="52" y="195">0.25</text>
+                  <text x="52" y="248">0</text>
+                </g>
+
+                <!-- X-axis ticks + labels (1 to 10 GHz) -->
+                <g stroke="#5A6472" stroke-width="1">
+                  <line x1="64"  y1="244" x2="64"  y2="250" />
+                  <line x1="118" y1="244" x2="118" y2="250" />
+                  <line x1="172" y1="244" x2="172" y2="250" />
+                  <line x1="226" y1="244" x2="226" y2="250" />
+                  <line x1="280" y1="244" x2="280" y2="250" />
+                  <line x1="334" y1="244" x2="334" y2="250" />
+                  <line x1="388" y1="244" x2="388" y2="250" />
+                  <line x1="442" y1="244" x2="442" y2="250" />
+                  <line x1="496" y1="244" x2="496" y2="250" />
+                  <line x1="548" y1="244" x2="548" y2="250" />
+                </g>
+                <g fill="#5A6472" font-size="12" text-anchor="middle" font-weight="500">
+                  <text x="64"  y="266">1</text>
+                  <text x="172" y="266">3</text>
+                  <text x="280" y="266">5</text>
+                  <text x="388" y="266">7</text>
+                  <text x="496" y="266">9</text>
+                </g>
+                <text x="306" y="290" text-anchor="middle"
+                      fill="#1A1D22" font-size="13" font-weight="600" letter-spacing="2">
+                  FREQUENCY (GHz)
+                </text>
+
+                <!-- Light horizontal grid lines -->
+                <g stroke="#C8C2B4" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.55">
+                  <line x1="64" y1="85"  x2="548" y2="85" />
+                  <line x1="64" y1="138" x2="548" y2="138" />
+                  <line x1="64" y1="191" x2="548" y2="191" />
+                </g>
+
+                <!-- Stylized |Γ(f)| curve with multi-layer interference features -->
+                <path d="M 64 74
+                         C 100 80, 130 88, 172 112
+                         C 210 133, 245 152, 280 163
+                         C 310 170, 345 145, 388 115
+                         C 415 96, 440 94, 472 104
+                         C 498 113, 522 128, 548 148"
+                      fill="none"
+                      stroke="#2B6CB0"
+                      stroke-width="3.25"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+
+                <!-- Endpoint markers -->
+                <circle cx="64"  cy="74"  r="3" fill="#2B6CB0" />
+                <circle cx="548" cy="148" r="3" fill="#2B6CB0" />
+
+              </svg>
+            </div>
+            <div class="output-caption">
+              Interference features across the sweep encode the moisture gradient.
+            </div>
+          </div>
+
+        </div>
+
+        <div class="b1-footer">
+          Every stage uses well-validated physics.
+          <b>The combination, and the inversion behind it, are ours.</b>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============== APPENDIX B2 — BAYESIAN INVERSION ============== -->
+    <section class="slide slide-b2" data-slide="10" id="slide-10">
+
+      <div class="mark-tl">B2 &nbsp;/&nbsp; Bayesian Inversion</div>
+      <div class="mark-tr">Cantena</div>
+
+      <div class="b2-content">
+
+        <div class="b2-header">
+          <div class="title">Recover the profile and know how sure we are</div>
+          <div class="sub">Physics-constrained inversion. Quantified uncertainty at every depth.</div>
+        </div>
+
+        <div class="b2-grid">
+
+          <!-- ============ LEFT PANE — MEASUREMENT ============ -->
+          <div class="b2-left">
+            <div class="b2-pane-label">Measurement</div>
+            <div class="b2-chart-panel">
+              <div class="panel-header">&#x007C;&#x0393;(f)&#x007C; measured</div>
+              <div class="panel-subhead">Broadband sweep from the VNA</div>
+              <svg class="b2-chart-svg"
+                   viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg"
+                   preserveAspectRatio="xMidYMid meet"
+                   font-family="Inter, -apple-system, sans-serif">
+
+                <!-- Axes -->
+                <line x1="52" y1="28" x2="52" y2="208" stroke="#1A1D22" stroke-width="1.25" />
+                <line x1="52" y1="208" x2="376" y2="208" stroke="#1A1D22" stroke-width="1.25" />
+
+                <!-- Y ticks + labels -->
+                <g stroke="#5A6472" stroke-width="1">
+                  <line x1="46" y1="28" x2="52" y2="28" />
+                  <line x1="46" y1="118" x2="52" y2="118" />
+                  <line x1="46" y1="208" x2="52" y2="208" />
+                </g>
+                <g fill="#5A6472" font-size="11" text-anchor="end" font-weight="500">
+                  <text x="42" y="32">1</text>
+                  <text x="42" y="122">0.5</text>
+                  <text x="42" y="212">0</text>
+                </g>
+
+                <!-- X ticks + labels -->
+                <g stroke="#5A6472" stroke-width="1">
+                  <line x1="52"  y1="208" x2="52"  y2="214" />
+                  <line x1="124" y1="208" x2="124" y2="214" />
+                  <line x1="196" y1="208" x2="196" y2="214" />
+                  <line x1="268" y1="208" x2="268" y2="214" />
+                  <line x1="340" y1="208" x2="340" y2="214" />
+                </g>
+                <g fill="#5A6472" font-size="11" text-anchor="middle" font-weight="500">
+                  <text x="52"  y="228">1</text>
+                  <text x="124" y="228">3</text>
+                  <text x="196" y="228">5</text>
+                  <text x="268" y="228">7</text>
+                  <text x="340" y="228">9</text>
+                </g>
+                <text x="212" y="248" text-anchor="middle"
+                      fill="#1A1D22" font-size="12" font-weight="600" letter-spacing="2">
+                  FREQUENCY (GHz)
+                </text>
+
+                <!-- Measured spectrum: slightly jittery blue curve to suggest real data -->
+                <path d="M 52 58
+                         C 82 62, 108 70, 132 88
+                         C 158 108, 184 128, 214 140
+                         C 238 150, 264 126, 290 102
+                         C 312 82, 336 82, 358 92
+                         C 368 98, 372 104, 376 112"
+                      fill="none" stroke="#2B6CB0" stroke-width="2.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+
+                <!-- Small measurement tick marks to suggest discrete sweep points -->
+                <g fill="#2B6CB0">
+                  <circle cx="52"  cy="58"  r="2.5" />
+                  <circle cx="88"  cy="64"  r="2.5" />
+                  <circle cx="124" cy="82"  r="2.5" />
+                  <circle cx="160" cy="110" r="2.5" />
+                  <circle cx="196" cy="132" r="2.5" />
+                  <circle cx="232" cy="142" r="2.5" />
+                  <circle cx="268" cy="120" r="2.5" />
+                  <circle cx="304" cy="94"  r="2.5" />
+                  <circle cx="340" cy="90"  r="2.5" />
+                  <circle cx="376" cy="112" r="2.5" />
+                </g>
+              </svg>
+            </div>
+            <div class="b2-caption">The only thing the device sees.</div>
+          </div>
+
+          <!-- ============ MIDDLE PANE — INVERSION PIPELINE ============ -->
+          <div class="b2-mid">
+            <div class="b2-pane-label">Inversion</div>
+            <div class="b2-pipeline">
+
+              <div class="b2-stage">
+                <div class="name">Propose</div>
+                <div class="detail">Candidate profile &#x002B; concrete properties</div>
+              </div>
+
+              <div class="b2-pipeline-arrow">&#x2193;</div>
+
+              <div class="b2-stage">
+                <div class="name">Forward model</div>
+                <div class="detail">Predict the spectrum</div>
+              </div>
+
+              <div class="b2-pipeline-arrow">&#x2193;</div>
+
+              <div class="b2-stage">
+                <div class="name">Compare</div>
+                <div class="detail">Likelihood vs measurement</div>
+              </div>
+
+              <div class="b2-pipeline-arrow">&#x2193;</div>
+
+              <div class="b2-stage">
+                <div class="name">Sample</div>
+                <div class="detail">Posterior sample</div>
+              </div>
+
+            </div>
+            <div class="b2-loop-note">
+              <span class="loop-arrow">&#x21BA;</span> Repeat until the posterior converges
+            </div>
+          </div>
+
+          <!-- ============ RIGHT PANE — POSTERIOR ============ -->
+          <div class="b2-right">
+            <div class="b2-pane-label">Posterior</div>
+            <div class="b2-chart-panel">
+              <div class="panel-header">Recovered RH by depth</div>
+              <div class="panel-subhead">Posterior mean &#x002B; 95% credible interval</div>
+              <svg class="b2-chart-svg"
+                   viewBox="0 0 540 320" xmlns="http://www.w3.org/2000/svg"
+                   preserveAspectRatio="xMidYMid meet"
+                   font-family="Inter, -apple-system, sans-serif">
+
+                <!-- Axes -->
+                <line x1="64" y1="32" x2="64" y2="244" stroke="#1A1D22" stroke-width="1.25" />
+                <line x1="64" y1="244" x2="508" y2="244" stroke="#1A1D22" stroke-width="1.25" />
+
+                <!-- Y-axis (depth) ticks + labels -->
+                <g stroke="#5A6472" stroke-width="1">
+                  <line x1="58" y1="32"  x2="64" y2="32" />
+                  <line x1="58" y1="85"  x2="64" y2="85" />
+                  <line x1="58" y1="138" x2="64" y2="138" />
+                  <line x1="58" y1="191" x2="64" y2="191" />
+                  <line x1="58" y1="244" x2="64" y2="244" />
+                </g>
+                <g fill="#5A6472" font-size="12" text-anchor="end" font-weight="500">
+                  <text x="52" y="36">0&quot;</text>
+                  <text x="52" y="142">3&quot;</text>
+                  <text x="52" y="248">6&quot;</text>
+                </g>
+                <text transform="rotate(-90, 28, 138)" x="28" y="138" text-anchor="middle"
+                      fill="#1A1D22" font-size="13" font-weight="600" letter-spacing="2">
+                  DEPTH
+                </text>
+
+                <!-- X-axis (RH) ticks + labels -->
+                <g stroke="#5A6472" stroke-width="1">
+                  <line x1="64"  y1="244" x2="64"  y2="250" />
+                  <line x1="175" y1="244" x2="175" y2="250" />
+                  <line x1="286" y1="244" x2="286" y2="250" />
+                  <line x1="397" y1="244" x2="397" y2="250" />
+                  <line x1="508" y1="244" x2="508" y2="250" />
+                </g>
+                <g fill="#5A6472" font-size="12" text-anchor="middle" font-weight="500">
+                  <text x="64"  y="264">0</text>
+                  <text x="175" y="264">25</text>
+                  <text x="286" y="264">50</text>
+                  <text x="397" y="264">75</text>
+                  <text x="508" y="264">100</text>
+                </g>
+                <text x="286" y="286" text-anchor="middle"
+                      fill="#1A1D22" font-size="13" font-weight="600" letter-spacing="2">
+                  RH %
+                </text>
+
+                <!-- 95% credible band (filled, semi-transparent brand blue) -->
+                <!-- Upper bound (wider RH) points down + lower bound back up, closed path -->
+                <path d="M 242 32
+                         C 254 58, 262 78, 270 85
+                         C 282 105, 302 130, 316 138
+                         C 340 158, 368 180, 392 191
+                         C 420 210, 446 232, 470 244
+                         L 405 244
+                         C 379 232, 349 210, 320 191
+                         C 299 180, 276 158, 257 138
+                         C 241 130, 226 105, 215 85
+                         C 205 78, 194 58, 180 32
+                         Z"
+                      fill="#2B6CB0" fill-opacity="0.14" stroke="none" />
+
+                <!-- True profile (dashed grey) -->
+                <path d="M 197 32
+                         C 210 58, 219 78, 228 85
+                         C 247 105, 266 130, 284 138
+                         C 307 158, 332 180, 356 191
+                         C 383 210, 412 232, 441 244"
+                      fill="none" stroke="#5A6472"
+                      stroke-width="1.5" stroke-dasharray="5 4" />
+
+                <!-- Posterior mean (solid brand blue) -->
+                <path d="M 211 32
+                         C 224 58, 232 78, 240 85
+                         C 259 105, 278 130, 293 138
+                         C 318 158, 344 180, 365 191
+                         C 394 210, 422 232, 445 244"
+                      fill="none" stroke="#2B6CB0"
+                      stroke-width="3.25" stroke-linecap="round" />
+
+                <!-- Legend (top-right, above data) -->
+                <g font-family="Inter, -apple-system, sans-serif">
+                  <line x1="356" y1="52" x2="378" y2="52"
+                        stroke="#2B6CB0" stroke-width="3" stroke-linecap="round" />
+                  <text x="384" y="56" fill="#1A1D22" font-size="11" font-weight="500">Posterior mean</text>
+
+                  <line x1="356" y1="72" x2="378" y2="72"
+                        stroke="#5A6472" stroke-width="1.5" stroke-dasharray="4 3" />
+                  <text x="384" y="76" fill="#5A6472" font-size="11" font-weight="500">Truth (simulated)</text>
+
+                  <rect x="356" y="86" width="22" height="9"
+                        fill="#2B6CB0" fill-opacity="0.18" />
+                  <text x="384" y="94" fill="#5A6472" font-size="11" font-weight="500">95% credible band</text>
+                </g>
+
+              </svg>
+            </div>
+            <div class="b2-caption">Every depth comes with its own uncertainty.</div>
+          </div>
+
+        </div>
+
+        <div class="b2-footer">
+          We recover the profile.
+          <b>We quantify the uncertainty at every depth.</b>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============== APPENDIX B6 — PIVOT TIMELINE ============== -->
+    <section class="slide slide-b6" data-slide="11" id="slide-11">
+
+      <div class="mark-tl">B6 &nbsp;/&nbsp; Pivot Timeline</div>
+      <div class="mark-tr">Cantena</div>
+
+      <div class="b6-content">
+
+        <div class="b6-timeline-wrap">
+          <svg viewBox="0 0 1600 380" xmlns="http://www.w3.org/2000/svg"
+               preserveAspectRatio="xMidYMid meet"
+               font-family="Inter, -apple-system, sans-serif">
+
+            <!-- Date labels (top row) -->
+            <g font-size="16" text-anchor="middle" font-weight="600" letter-spacing="3" fill="#5A6472">
+              <text x="150"  y="40">OCT 2025</text>
+              <text x="470"  y="40">FEB 2026</text>
+              <text x="790"  y="40">APR</text>
+              <text x="1110" y="40">APR 8</text>
+              <text x="1430" y="40">NOW</text>
+            </g>
+
+            <!-- Timeline line: grey before pivot, blue after -->
+            <line x1="150" y1="160" x2="1110" y2="160"
+                  stroke="#5A6472" stroke-width="2.5" />
+            <line x1="1110" y1="160" x2="1430" y2="160"
+                  stroke="#2B6CB0" stroke-width="2.5" />
+
+            <!-- Pre-pivot nodes (dark) -->
+            <circle cx="150" cy="160" r="10" fill="#1A1D22" />
+            <circle cx="470" cy="160" r="10" fill="#1A1D22" />
+            <circle cx="790" cy="160" r="10" fill="#1A1D22" />
+
+            <!-- Post-pivot node (moisture era, blue) -->
+            <circle cx="1430" cy="160" r="10" fill="#2B6CB0" />
+
+            <!-- Pivot node (Apr 8): larger brand-blue circle with white arrow -->
+            <circle cx="1110" cy="160" r="24" fill="#2B6CB0" />
+            <g stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+              <line x1="1095" y1="160" x2="1122" y2="160" />
+              <polyline points="1113,151 1122,160 1113,169" />
+            </g>
+
+            <!-- Main labels (below nodes) -->
+            <g font-size="28" text-anchor="middle" font-weight="700"
+               fill="#1A1D22" letter-spacing="-0.01em">
+              <text x="150"  y="225">Team formed</text>
+              <text x="470"  y="225">QTO idea</text>
+              <text x="790"  y="225">Evidence converged</text>
+              <text x="1110" y="225">Pivot</text>
+              <text x="1430" y="225">Moisture</text>
+            </g>
+
+            <!-- Sub labels (two lines each, muted) -->
+            <g font-size="19" text-anchor="middle" fill="#5A6472" font-weight="400">
+              <text x="150" y="262">3 cofounders</text>
+              <text x="150" y="287">started building.</text>
+
+              <text x="470" y="262">PMR begins.</text>
+              <text x="470" y="287">40+ conversations in 6 weeks.</text>
+
+              <text x="790" y="262">Tech dead ends.</text>
+              <text x="790" y="287">Stronger pull from moisture.</text>
+
+              <text x="1110" y="262">Physics work begins.</text>
+              <text x="1110" y="287">Same teams. New problem.</text>
+
+              <text x="1430" y="262">Forward model + inversion running.</text>
+              <text x="1430" y="287">3 LOIs. 2 pilots lined up.</text>
+            </g>
+
+          </svg>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============== SLIDE 12 · APPENDIX B7 — PRODUCT ROADMAP ============== -->
+    <section class="slide slide-b7" data-slide="12" id="slide-12">
+
+      <div class="mark-tl">B7 &nbsp;/&nbsp; Product Roadmap</div>
+      <div class="mark-tr">Cantena</div>
+
+      <div class="b7-content">
+
+        <div class="b7-cards">
+
+          <div class="b7-card is-now">
+            <div class="stage">
+              <span class="dot"></span>
+              <span class="label">NOW</span>
+            </div>
+            <div class="headline">Tethered prototype</div>
+            <div class="desc">Vivaldi antenna + nanoVNA.<br>Tethered to laptop.</div>
+          </div>
+
+          <div class="b7-card is-summer">
+            <div class="stage">
+              <span class="dot"></span>
+              <span class="label">SUMMER 2026</span>
+            </div>
+            <div class="headline">Pilots + hardware design</div>
+            <div class="desc">Pilot: tethered on real slabs.<br>Design: standalone hardware.</div>
+          </div>
+
+          <div class="b7-card is-next">
+            <div class="stage">
+              <span class="dot"></span>
+              <span class="label">NEXT</span>
+            </div>
+            <div class="headline">Standalone handheld</div>
+            <div class="desc">Untethered device.<br>Shippable to GCs.</div>
+          </div>
+
+          <div class="b7-card is-future">
+            <div class="stage">
+              <span class="dot"></span>
+              <span class="label">FUTURE</span>
+            </div>
+            <div class="headline">Continuous monitoring</div>
+            <div class="desc">Subscription beyond hardware.<br>Historical data compounds.</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============== SLIDE 13 · APPENDIX B8 — TRACTION DETAIL ============== -->
+    <section class="slide slide-b8" data-slide="13" id="slide-13">
+
+      <div class="mark-tl">B8 &nbsp;/&nbsp; Traction Detail</div>
+      <div class="mark-tr">Cantena</div>
+
+      <div class="b8-content">
+
+        <div class="b8-cols">
+
+          <!-- COMMITTED -->
+          <div class="b8-col">
+            <div class="col-header">Committed</div>
+
+            <div class="b8-group">
+              <div class="group-label">Pilots (2)</div>
+              <div class="b8-item">
+                <div class="org">Adila Construction</div>
+                <div class="meta">Jay Willow</div>
+              </div>
+              <div class="b8-item">
+                <div class="org">Two Kings Company</div>
+                <div class="meta">Manish Shah</div>
+              </div>
+            </div>
+
+            <div class="b8-group">
+              <div class="group-label">Launch partner</div>
+              <div class="b8-item">
+                <div class="org">Harris Flooring</div>
+                <div class="meta">Drew &middot; 10 yrs &middot; $2.9M mitigation<br>5 projects. Data + deployment + advocacy.</div>
+              </div>
+            </div>
+
+            <div class="b8-group">
+              <div class="group-label">LOIs (3)</div>
+              <div class="b8-item">
+                <div class="org">Signed pre-pivot</div>
+                <div class="meta">Same teams, new problem.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- NETWORK -->
+          <div class="b8-col">
+            <div class="col-header">Network</div>
+
+            <div class="b8-group">
+              <div class="group-label">GC network</div>
+              <div class="group-sub">From prior industry PMR.</div>
+
+              <div class="b8-item-list">
+                <div class="org-line">Carroll Daniel</div>
+                <div class="org-line">Choate</div>
+                <div class="org-line">Haskell</div>
+                <div class="org-line">Messer</div>
+                <div class="org-line">Hood</div>
+                <div class="org-line">Evans</div>
+                <div class="org-line">Juneau</div>
+                <div class="org-line">Harper</div>
+              </div>
+
+              <div class="subgroup-label">Local (3)</div>
+              <div class="b8-item-list">
+                <div class="org-line">Tocci</div>
+                <div class="org-line">Walsh Brothers</div>
+                <div class="org-line">Whiting Turner</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PIPELINE -->
+          <div class="b8-col">
+            <div class="col-header">Pipeline</div>
+
+            <div class="b8-group">
+              <div class="group-label">Re-engagement</div>
+              <div class="b8-item">
+                <div class="org">Wehr, Slape</div>
+              </div>
+            </div>
+
+            <div class="b8-group">
+              <div class="group-label">Warm intros</div>
+              <div class="b8-item">
+                <div class="org">TNT CEO &rarr; McKinsey partner</div>
+              </div>
+            </div>
+
+            <div class="b8-group">
+              <div class="group-label">Events attended</div>
+              <div class="b8-item">
+                <div class="org">BU construction conference</div>
+                <div class="meta">Only startup on the program</div>
+              </div>
+              <div class="b8-item">
+                <div class="org">Harvard proptech symposium</div>
+                <div class="meta">Companies across the industry. Both pilots sourced here.</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
     </section>
 
   </div>
